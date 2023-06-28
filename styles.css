@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 69px;
+    line-height: 69px;
+    font-weight: 700;
+}
+.col-lg-6,
+.col-md-6 {
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    flex-direction: column;
+}
+
+/* navigation styling */
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-item {
+    margin-left: 1.5rem;
+    color: #000;
+    display: block;
+}
+.navigation-item:hover {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #e16259;
+    text-underline-offset: 5px;
+}
+.navigation.show {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: auto;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 0 1em;
+}
+
+.navigation.show .navigation-item {
+    display: block;
+    padding: .5em 0;
+    margin: 0;
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.navigation.show .navigation-item:hover {
+    background: rgb(245 245 245 / 50%);
+}
+
+.hamburger-btn {
+    display: none;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-btn:focus {
+    outline: none;
+}
+  
+.menu-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('src/assets/images/bars.svg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* hero styling */
+.hero {
+    background-color: #fff;
+    padding: 50px 0 0;
+    max-width: 1225px;
+    min-width: 420px;
+    margin: 0 auto;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
+.hero-text {
+    margin-right: 50px;
+}
+.lead {
+    font-size: 20px;
+    line-height: 29px;
+    margin-top: 1em;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+.header.scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: .5rem 2rem;
+}
+.header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1300px;
+    min-width: auto;
+    padding: 0;
+}
+.logo-title {
+    width: 100px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34.8px;
+    text-align: center;
+}
+
+/* search styling */
+.search-container {
+    width: 100%;
+    max-width: 1225px;
+    margin: 3em 0;
+}
+.search-container input {
+    min-width: 384px;
+    padding: 0.8em;
+    font-size: 14px;
+    border: 2px solid #eee;
+    border-radius: 4px;
+}
+input::placeholder {
+    color: rgba(0,0,0,.4)
+}
+input:focus {
+    outline: none;
+    border-color: #e162594d;
+}
+
+/* card styling */
+.card.card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1em;
+    margin: 0 2em 3em 0;
+    width: 282px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+}
+.card:last-child {
+    margin-right: 0;
+}
+.card-location {
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0,0,0,.6);
+}
+.card-title.card-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 29.7px;
+    margin-bottom: 0;
+}
+.card-link {
+    color: #e16259;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+.card-link:hover {
+    color: #e16259be;
+    
+}
+.bullet {
+    font-size: .5em;
+    margin: 0 .5em;
+}
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* media queries */
+@media only screen and (max-width: 1024px) {
+    .hero-container {
+        background-color: transparent;
+        z-index: 1;
+    }
+    .img-container {
+        position: absolute;
+        right: 2em;
+        display: block;
+        width: 230px;
+        opacity: .5;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+    .navigation-item {
+        display: none;
+    }
+  
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .show .hamburger-btn {
+        position: absolute;
+        top: 18px;
+        right: 32px;
+    }
+
+    .show .menu-icon {
+        background-image: url('src/assets/images/x.svg');
+    }
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .hero-text {
+        margin: 0;
+        padding: 0 1em;
+    }
+    .card-row {
+        align-items: center;
+        justify-content: space-around;
+    }
+    .card.card {
+        margin-right: 0;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .header {
+        padding: 1rem;
+    }
+    .container {
+        min-width: 420px;
+    }
+    .hero-text {
+        margin: 0;
+        padding: 0 1em;
+    }
+    .hero-text h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .img-container {
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .img-container img {
+        width: 50%;
+    }
+    .card.card {
+        margin-right: 0;
+    }
+    .card-row {
+        align-items: center;
+        justify-content: center;
+    }
+    .uni-container {
+        margin-top: 0;
+    }
+}
